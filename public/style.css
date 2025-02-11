@@ -1,0 +1,89 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #000000;
+    text-align: center;
+    padding: 20px;
+    margin: 0;
+}
+
+/* Post Container */
+.post {
+    background: rgb(228, 219, 219);
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    width: 50%;
+    margin: 20px auto;
+}
+
+/* Headings */
+h1, h2 {
+    color: #ffffff;
+}
+
+.user {
+    font-weight: bold;
+    color: #007bff;
+}
+
+/* Links */
+a {
+    display: inline-block;
+    margin: 10px;
+    text-decoration: none;
+    font-weight: bold;
+    color: #ff0000;
+    font-size: 16px;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Buttons */
+button {
+    background-color: #dc3545;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+button:hover {
+    background-color: #b1404b;
+}
+
+/* Forms */
+form {
+    background: rgb(44, 49, 49);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    width: 50%;
+    margin: auto;
+    text-align: left;
+    text-align: center;
+}
+
+input, textarea {
+    width: 100%;
+    border-radius: 5px;
+    border: 3px solid #ff0000;
+    font-size: 16px;
+    margin-bottom: 10px;
+   
+}
+
+/* Responsive */
+@media screen and (max-width: 768px) {
+    .post, form {
+        width: 90%;
+    }
+    button {
+        width: 100%;
+    }
+}

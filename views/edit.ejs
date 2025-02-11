@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EDIT THE CONTENT</title>
+    <link rel="stylesheet" href="/style.css"/>
+</head>
+<body>
+    <div class="container">
+        <h2>EDIT YOUR POST</h2>
+        <p><strong>POST ID:</strong> <%= post.id %></p>
+        <p><strong>POST USERNAME:</strong> <%= post.username %></p>
+
+        <form method="post" action="/posts/<%= post.id %>?_method=PATCH">
+            <textarea rows="10" name="content"><%= post.content %></textarea>
+            <br>
+            <button type="submit">Update Post</button>
+        </form>
+
+        <br>
+        <a href="/posts">⬅ Back to Posts</a>
+    </div>
+</body>
+</html>

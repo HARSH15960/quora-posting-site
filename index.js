@@ -1,6 +1,6 @@
 const express = require("express");
 const app = express();
-const port = 8080;
+const port = process.env.PORT || 8080;  // ✅ Use dynamic port
 const path = require("path");
 const { v4: uuidv4 } = require("uuid");
 const methodOverride = require("method-override");
@@ -23,6 +23,11 @@ let posts = [
   { id: uuidv4(), username: "HarshSingla", content: "Hard Work is important to achieve success" },
   { id: uuidv4(), username: "RahulKumar", content: "I got selected for my 1st internship" },
 ];
+
+// ✅ Add Home Route (Redirect to `/posts`)
+app.get("/", (req, res) => {
+  res.redirect("/posts");
+});
 
 // Show All Posts
 app.get("/posts", (req, res) => {
@@ -74,5 +79,5 @@ app.delete("/posts/:id", (req, res) => {
 
 // Start Server
 app.listen(port, () => {
-  console.log(`Server is listening on port ${port}`);
+  console.log(`✅ Server is running on port ${port}`);
 });
